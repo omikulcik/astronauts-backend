@@ -1,0 +1,7 @@
+type Astronaut {
+  id: ID! @id
+  name: String!
+  surname: String!
+  superPower: String!
+  birthDate: Int!
+}

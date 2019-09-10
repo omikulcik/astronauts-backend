@@ -1,0 +1,31 @@
+type Query {
+    astronauts: [Astronaut!]!
+}
+
+type Mutation {
+    createAstronaut(data: CreateAstronautInput!): Astronaut!
+    updateAstronaut(id: String, data: UpdateAstronautInput!): Astronaut!
+    deleteAstronaut(id: String!): Astronaut!
+}
+
+input CreateAstronautInput {
+  name: String!
+  surname: String!
+  superPower: String!
+  birthDate: Int!
+}
+
+input UpdateAstronautInput {
+  name: String
+  surname: String
+  superPower: String
+  birthDate: Int
+}
+
+type Astronaut {
+  id: ID! 
+  name: String!
+  surname: String!
+  superPower: String!
+  birthDate: Int!
+}
